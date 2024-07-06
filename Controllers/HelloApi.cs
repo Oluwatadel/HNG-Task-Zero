@@ -23,10 +23,9 @@ namespace HNG_Stage_1_Task.Controllers
             //Google Public DNS IP for testing
             if (clientIp == "::1") clientIp = "102.88.81.179 ";
 
+
             //Fetching location details using IpInfo.io
             var ipInfoClient = await _httpClient.GetStringAsync($"http://ip-api.com/json/{clientIp}");
-            //ipInfoClient.EnsureSuccessStatusCode();
-            //var responseIpInfoClient = await ipInfoClient.Content.ReadAsStringAsync();
             var option = new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true

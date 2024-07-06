@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\HNG Stage 1 Task.props" />
+</Project>
