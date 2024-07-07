@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HNG Stage 1 Task")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d05a7c3e25a51b18e5428413b6efb6618a614bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38794469b7ed41864099c7601bbc1427c6ea31cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("HNG Stage 1 Task")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HNG Stage 1 Task")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

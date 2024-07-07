@@ -8,12 +8,15 @@ namespace HNG_Stage_1_Task.Controllers
     public class HelloApi : ControllerBase
     {
         private readonly HttpClient _httpClient;
-
-        public HelloApi(HttpClient httpClient)
+        private readonly ILogger<HelloApi> _logger;
+        public HelloApi(HttpClient httpClient, ILogger<HelloApi> logger)
         {
             _httpClient = httpClient;
+            _logger = logger;
         }
 
+
+        //https://localhost:7009/api/HelloApi?visitor_name=[visitor_name]
         [HttpGet]
         public async Task<ActionResult> Get([FromQuery] string visitor_name)
         {
@@ -21,7 +24,7 @@ namespace HNG_Stage_1_Task.Controllers
             Console.WriteLine(clientIp);
 
             //Google Public DNS IP for testing
-            if (clientIp == "::1") clientIp = "102.88.81.179 ";
+            if (clientIp == "::1") clientIp = await FetchIp.GetIp(_httpClient);
 
 
             //Fetching location details using IpInfo.io
@@ -50,5 +53,6 @@ namespace HNG_Stage_1_Task.Controllers
 
             return Ok(returnResponse);
         }
+
     }
 }
